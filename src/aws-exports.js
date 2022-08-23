@@ -20,13 +20,9 @@ const awsmobile = {
         "redirectSignOut": "https://appclient2.aws-amplify.dev/",
         "responseType": "code"
     },
-    "federationTarget": "COGNITO_USER_POOLS",
-    "aws_cognito_username_attributes": [],
-    "aws_cognito_social_providers": [],
     "aws_cognito_signup_attributes": [
         "EMAIL"
     ],
-    "aws_cognito_mfa_configuration": "OFF",
     "aws_cognito_mfa_types": [
         "SMS"
     ],
