@@ -33,12 +33,9 @@ const AuthedUser = (user) => {
         <div>
           <h1> Hi {user.user.username}</h1>
           You've signed in to AppClient2 <p/>
-            <button onClick={() => Auth.signOut()}>
-                Sign Out from App client 2
-            </button>
             <p/>
             <button onClick={() => globalSignOut()}>
-                Sign Out from SSO
+                Sign Out
             </button>
         </div>
     );
