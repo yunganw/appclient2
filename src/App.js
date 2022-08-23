@@ -41,33 +41,38 @@ const AuthedUser = (user) => {
     );
 };
 
+const Loading = () => {
+    return (<div id="loading"></div>);
+}
+
 export default function App() {
     const [user, setUser] = useState(null);
-    // const [customState, setCustomState] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const unsubscribe = Hub.listen('auth', ({payload: {event, data}}) => {
             switch (event) {
                 case 'signIn':
+                    setLoading(false);
                     setUser(data);
                     break;
                 case 'signOut':
+                    setLoading(false);
                     setUser(null);
                     break;
-                // case 'customOAuthState':
-                //     setCustomState(data);
-                //     break;
                 default:
                     break;
             }
         });
 
+        setLoading(true);
         Auth.currentAuthenticatedUser()
-            .then((currentUser) => setUser(currentUser))
-            .catch(() => console.log('Not signed in'));
+            .then((currentUser) => {setUser(currentUser); setLoading(false)})
+            .catch(() => {setLoading(false);console.log('Not signed in')});
 
         return unsubscribe;
     }, []);
 
-    return user ? <AuthedUser user={user}/> : <UnauthedUser />;
+    // return <Loading />;
+    return loading ? <Loading /> : (user ? <AuthedUser user={user}/> : <UnauthedUser />);
 }
