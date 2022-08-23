@@ -18,7 +18,7 @@ async function globalSignOut() {
 const UnauthedUser = () => {
     return (
         <div>
-            <h1>App Client2</h1>
+            <h1>Application2</h1>
             You have not signed in yet.<p/>
             <button onClick={() => Auth.federatedSignIn()}>
                 Open Hosted UI
@@ -32,7 +32,7 @@ const AuthedUser = (user) => {
     return (
         <div>
           <h1> Hi {user.user.username}</h1>
-          You've signed in to AppClient2 <p/>
+          You've signed in to Application 2 <p/>
             <p/>
             <button onClick={() => globalSignOut()}>
                 Sign Out
