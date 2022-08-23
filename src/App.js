@@ -36,10 +36,10 @@ const AuthedUser = (user) => {
             <button onClick={() => Auth.signOut()}>
                 Sign Out from App client 2
             </button>
+            <p/>
             <button onClick={() => globalSignOut()}>
                 Sign Out from SSO
             </button>
-
         </div>
     );
 };
