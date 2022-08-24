@@ -42,7 +42,7 @@ const AuthedUser = (user) => {
 };
 
 const Loading = () => {
-    return (<div id="loading">Loading</div>);
+    return (<div id="loading"></div>);
 }
 
 export default function App() {
