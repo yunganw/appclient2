@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import "@cloudscape-design/global-styles/index.css"
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Authenticator} from '@aws-amplify/ui-react';
