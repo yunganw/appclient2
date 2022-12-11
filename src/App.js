@@ -60,7 +60,7 @@ const AuthButton = ({user}) => {
   ) : (
     <div><Button onClick={() => Auth.federatedSignIn()}>Login</Button>
     {' '}
-    <Button onClick={() => Auth.federatedSignIn({provider: 'customauth'})}>Passwordless</Button></div>
+    <Button onClick={() => Auth.federatedSignIn({provider: 'CustomAuth'})}>Passwordless</Button></div>
   );
 };
 
