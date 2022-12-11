@@ -36,9 +36,9 @@ const UnauthedUser = () => {
         Login
       </Button>{' '}
       to load the Hosted UI Or You can click{' '}
-      <Button onClick={() => Auth.federatedSignIn({provider: 'customauth'})}>Passwordless</Button>{' '}
+      <Button onClick={() => Auth.federatedSignIn({provider: 'CustomAuth'})}>Passwordless</Button>{' '}
       to direclty start passwordless login<p />
-      You may <Link>Sign Up</Link> first in the <Button onClick={() => Auth.federatedSignIn()}>Hosted UI</Button> if haven't done so
+      You may <Link>Sign Up</Link> first in the <Link onClick={() => Auth.federatedSignIn()}>Hosted UI</Link> if haven't done so
     </Box>
   );
 };
@@ -71,7 +71,7 @@ const DispContent = ({loading, user}) => {
 
 const DispHeader = ({loading, user}) => {
   if (loading) return <p></p>;
-  return user ? <p>Hi, {user.username}</p> : <p>Not User Signed In</p>;
+  return user ? <p>Hi, {user.username}</p> : <p>No User Signed In</p>;
 };
 
 const AppBody = ({loading, user}) => {
