@@ -7,7 +7,7 @@ const awsmobile = {
     "aws_user_pools_id": "us-east-1_B78sn82ah",
     "aws_user_pools_web_client_id": "2tagf6nq0mr3hau8n8t4mbimhe",
     "oauth": {
-        "domain": "amplifyreactcustauth-dev.auth.us-east-1.amazoncognito.com",
+        "domain": "ygtest.auth.us-east-1.amazoncognito.com",
         "scope": [
             "phone",
             "email",
